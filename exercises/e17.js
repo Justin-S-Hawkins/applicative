@@ -10,13 +10,43 @@
 
 export function minBy(array, cb) {
   // Your code goes here...
-
-}
-
+  let empty = [];
+  if (array.length === 0 ){
+    return undefined
+  };
+ for (let element of array){
+  empty.push (element.age)
+  }
+  const findingMin = empty.reduce((min,currentVal)=>{
+    if (min < currentVal){currentVal = min}
+    return currentVal
+  })
+  for (let element of array){
+  if (element.age === findingMin){
+   return element
+  }
+  }
+  }
 export function maxBy(array, cb) {
   // Your code goes here...
-
-}
+      if (array.length === 0) return undefined;
+    
+      let maxElement = array[0];
+      let maxValue = cb(maxElement);
+    
+      for (let i = 1; i < array.length; i++) {
+        const currentElement = array[i];
+        const currentValue = cb(currentElement);
+    
+        if (currentValue > maxValue) {
+          maxValue = currentValue;
+          maxElement = currentElement;
+        }
+      }
+    
+      return maxElement;
+    }
+  
 
 
 // === TEST YOURSELF ===

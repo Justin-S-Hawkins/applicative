@@ -6,7 +6,17 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
-}
+  let empty =[];
+  const planets = data.planets.filter((object) => { 
+    if (object.moons){
+      empty.push(object.moons.length)
+    }
+ })
+let sum = empty.reduce(function(acc, currentVal){
+   return acc + currentVal
+  },0)
+  return sum
+  }
 
 
 

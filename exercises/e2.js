@@ -6,6 +6,14 @@ import { data } from "../data/data";
 
 export function getAsteroidNames(data) {
   // Your code goes here...
+  const allPlanets = data.asteroids;
+  let newName =[];
+  const asteroidNames = allPlanets.filter(
+  object => newName.push(object.name)
+  )
+                                        
+  
+  return newName
 }
 
 

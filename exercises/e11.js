@@ -7,6 +7,14 @@ import { data } from "../data/data";
 
 export function lowMoonsPlanets(data) {
   // Your code goes here...
+  let empty = [];
+  const planets = data.planets.filter((object,i)=> {
+    if (!object.moons || object.moons.length < 10){
+     empty.push(object.name)
+    }
+
+  })
+ return empty
 }
 
 // === TEST YOURSELF ===

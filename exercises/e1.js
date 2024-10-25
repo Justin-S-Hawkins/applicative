@@ -6,8 +6,18 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
-  for the commmit
-}
+  const allPlanets = data.planets;
+  let newName =[];
+  const planetsNames = allPlanets.filter(
+  object => newName.push(object.name)
+  )
+                                        
+  
+  return newName
+
+  }
+
+
 
 
 

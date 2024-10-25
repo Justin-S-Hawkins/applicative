@@ -6,6 +6,13 @@ import { data } from "../data/data";
 
 export function getPlanetsWithNoMoons(data) {
   // Your code goes here...
+  let empty =[];
+  const planets = data.planets.filter((object)=>{
+    if (!object.moons){
+      empty.push(object.name)
+    }
+  })
+  return empty
 }
 
 
