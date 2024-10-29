@@ -6,15 +6,15 @@ import { data } from "../data/data";
 
 export function getEarthData(data) {
   // Your code goes here...
-  let planet = undefined;
-  const planets = data.planets 
-  const values = planets.filter(function(object){
+let planet = undefined;
+data.planets.filter((object)=>{
 if ( object.name == 'Earth'){
 planet = (object)
 }
-  })
-  return planet
+})
+return planet
 }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-9"

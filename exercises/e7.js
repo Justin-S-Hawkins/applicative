@@ -6,13 +6,9 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
-  let ifHasMoon =[];
-  const planetsWithMoons = data.planets
-  
-  const parsingMoons = planetsWithMoons.filter(function(object){
-    if (object.moons){
-      ifHasMoon.push(object.name)
-    }
+let ifHasMoon =[];
+data.planets.filter((planet)=> {
+    if (planet.moons){ifHasMoon.push(planet.name)}
   })
   return ifHasMoon
 }

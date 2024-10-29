@@ -6,15 +6,7 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
-  const allPlanets = data.planets;
-  let newName =[];
-  const planetsNames = allPlanets.filter(
-  object => newName.push(object.name)
-  )
-                                        
-  
-  return newName
-
+    return data.planets.map((planet)=> planet.name)                                        
   }
 
 

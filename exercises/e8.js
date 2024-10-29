@@ -5,10 +5,10 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  const planet = data.planets.find(planet => 
+  const named = data.planets.find(planet => 
     planet.moons && planet.moons.includes(moonName)
-  );
-  return planet ? planet.name : null;
+);
+  return named.name
 }
 
 

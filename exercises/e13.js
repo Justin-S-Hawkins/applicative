@@ -6,17 +6,12 @@ import { data } from "../data/data";
 
 export function getAveragePlanetsTemperature(data) {
   // Your code goes here...
-  let empty =[];
-  const planets = data.planets.filter((object) =>{
-   if (object.avgTemp){
-    empty.push(object.avgTemp)
-   }
-  })
-let average= empty.reduce(function(acc,currentVal){
-   return acc + currentVal
-},0)
-return average / empty.length
-}
+  let temps = data.planets.map((object) =>object.avgTemp)
+  let average = temps.reduce((acc,currentValue)=>{
+  return acc + currentValue / temps.length
+ },0)
+ return average
+ }
 
 
 

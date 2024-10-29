@@ -7,14 +7,13 @@ import { data } from "../data/data";
 
 export function lowMoonsPlanets(data) {
   // Your code goes here...
-  let empty = [];
-  const planets = data.planets.filter((object,i)=> {
+  let lessThanTenPlusZero = [];
+ data.planets.filter((object)=> {
     if (!object.moons || object.moons.length < 10){
-     empty.push(object.name)
-    }
-
+      lessThanTenPlusZero.push(object.name)
+    }   
   })
- return empty
+ return lessThanTenPlusZero
 }
 
 // === TEST YOURSELF ===
